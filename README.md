@@ -1,5 +1,6 @@
 # PHYSBO-Tutorial
 How to use PHYSBO for our laboratory
+![BO_sample](./BO_sample.png)
 ## PHYSBO code
 [https://github.com/issp-center-dev/PHYSBO](https://github.com/issp-center-dev/PHYSBO)
 ## Preparation
