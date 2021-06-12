@@ -18,6 +18,8 @@ If you want to carry out the LASSO's optimization (this is my hobby),
 ```bash
 pip3 install scikit-learn mglearn
 ```
+## Tutorial
+[Basic Tutorial](./Basic/README.md)
 
 ## PHYSBO manual
 - [English Manual](https://issp-center-dev.github.io/PHYSBO/manual/master/en/index.html)
