@@ -31,23 +31,29 @@ if __name__ == '__main__':
     print(f"best_fx: {best_fx[-1]} at {test_X[best_actions[-1]]}")
 
     # Bayes_search
-    policy.bayes_search(max_num_probes=3, simulator=simulator, score="EI", 
+    res = policy.bayes_search(max_num_probes=20, simulator=simulator, score="EI", 
     interval=1, num_rand_basis=500)
-    print(f"best_fx: {best_fx[-1]} at {test_X[best_actions[-1]]}")
-    
-    # Visualization
-    scores = policy.get_score(mode="EI", xs=test_X)
-    fig = plt.figure()
-    plt.plot(scores)
-    fig.savefig("EI_1.png") 
-
-    policy.bayes_search(max_num_probes=7, simulator=simulator, score="EI", 
-    interval=1, num_rand_basis=500)
-
-    scores = policy.get_score(mode="EI", xs=test_X)
-    fig = plt.figure()
-    plt.plot(scores)
-    fig.savefig("EI_2.png")
-
     best_fx, best_actions = policy.history.export_sequence_best_fx()
     print(f"best_fx: {best_fx[-1]} at {test_X[best_actions[-1]]}")
+
+    fig = plt.figure()
+    plt.plot(res.fx[0:res.total_num_search])
+    best_fx, best_action = res.export_all_sequence_best_fx()
+    plt.plot(best_fx)
+    fig.savefig("Search.png")
+
+
+    # Visualization EI
+    #policy.bayes_search(max_num_probes=3, simulator=simulator, score="EI", 
+    #interval=1, num_rand_basis=500)
+    #print(f"best_fx: {best_fx[-1]} at {test_X[best_actions[-1]]}")
+    #scores = policy.get_score(mode="EI", xs=test_X)
+    #fig = plt.figure()
+    #plt.plot(scores)
+    #fig.savefig("EI_1.png") 
+    #policy.bayes_search(max_num_probes=7, simulator=simulator, score="EI", 
+    #interval=1, num_rand_basis=500)
+    #scores = policy.get_score(mode="EI", xs=test_X)
+    #fig = plt.figure()
+    #plt.plot(scores)
+    #fig.savefig("EI_2.png")
