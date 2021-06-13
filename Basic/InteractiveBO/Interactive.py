@@ -21,5 +21,5 @@ print(t_initial)
 
 # Bayes_search
 policy = physbo.search.discrete.policy(test_X=X, initial_data=[calculated_ids, t_initial])
-actions = policy.bayes_search(max_num_probes=1, simulator=None, score="EI", interval=1,  num_rand_basis = 5000)
+actions = policy.bayes_search(max_num_probes=1, simulator=None, score="EI", interval=1,  num_rand_basis = len(calculated_ids))
 print(actions, X[actions])
