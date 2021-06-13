@@ -40,7 +40,7 @@ if __name__ == '__main__':
     policy.random_search(max_num_probes=1, simulator=simulator)
 
     for i in range(10):
-        policy.bayes_search(max_num_probes=1, simulator=simulator, score="EI", interval=1, num_rand_basis=500)
+        policy.bayes_search(max_num_probes=1, simulator=simulator, score="EI", interval=1, num_rand_basis=i)
         Figname = "BO_"+ str(i) + ".png"
         plotfig(policy,alpha_val,Figname)
 
