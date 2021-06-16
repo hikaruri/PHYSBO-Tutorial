@@ -38,6 +38,7 @@ if __name__ == '__main__':
     policy = physbo.search.discrete.policy(test_X=alpha_val)
     policy.set_seed(10)
     policy.random_search(max_num_probes=1, simulator=simulator)
+    #policy.bayes_search(max_num_probes=10, simulator=simulator, score="EI", interval=1, num_rand_basis=500)
 
     for i in range(10):
         policy.bayes_search(max_num_probes=1, simulator=simulator, score="EI", interval=1, num_rand_basis=i)
