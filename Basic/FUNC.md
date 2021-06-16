@@ -1,4 +1,5 @@
-# OneMax Problem
+# Searching a maximum value of function
+
 Please refer to [OneMax problem's tutorial](./ONEMAX.md).
 
 We visualize the function of Gaussian process regression and reveal how to optimize by BO.
