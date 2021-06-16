@@ -33,3 +33,5 @@ Or, please use [MateriApps LIVE!](http://cmsi.github.io/MateriAppsLive/). Releas
   - Almost functions are same as COMBO
 - 持橋 大地, 大羽 成征, ガウス過程と機械学習 (機械学習プロフェッショナルシリーズ), 講談社 (2019)
   - 日本語で一番わかりやすい資料
+## Buy me a coffee?
+<a href="https://www.buymeacoffee.com/hikaruri" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="180" height="50" ></a>
