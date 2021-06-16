@@ -80,7 +80,7 @@ fig.savefig("Search.png")
 ```
 ![Search_sample](Search_sample.png)
 
-We can visualize an evaluation function by `policy.get_score(mode="EI", xs=test_X)`
+We can visualize an evaluation function by `policy.get_score`
 ```Python
 scores = policy.get_score(mode="EI", xs=test_X)
 fig = plt.figure()
