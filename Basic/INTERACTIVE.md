@@ -72,3 +72,4 @@ Done
 
 [70] [[1.85]]
 ```
+We have to make next input file of LC = 1.85 {\AA}. If the calculation is finished, we update `data.txt`.
