@@ -18,6 +18,7 @@ If you want to carry out the LASSO's optimization (this is my hobby),
 ```bash
 pip3 install scikit-learn mglearn
 ```
+Or, please use [MateriApps LIVE!](http://cmsi.github.io/MateriAppsLive/). Release 3.3 includes PHYSBO.
 ## Tutorial
 [Basic Tutorial](./Basic/README.md)
 
