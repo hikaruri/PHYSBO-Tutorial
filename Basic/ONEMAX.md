@@ -78,3 +78,11 @@ best_fx, best_action = res.export_all_sequence_best_fx()
 plt.plot(best_fx)
 fig.savefig("Search.png")
 ```
+We can visualize an evaluation function by `policy.get_score(mode="EI", xs=test_X)`
+```Python
+scores = policy.get_score(mode="EI", xs=test_X)
+fig = plt.figure()
+plt.plot(scores)
+fig.savefig("EI_1.png") 
+```
+![EI_sample](EI_sample.png)
