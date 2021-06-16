@@ -67,8 +67,19 @@ print(f"best_fx: {best_fx[-1]} at {test_X[best_actions[-1]]}")
 ```
 `score` can be selected in [EI, PI or TS](https://issp-center-dev.github.io/PHYSBO/manual/master/ja/_modules/physbo/search/score.html).
 
+Finally, we get the maximum value and index.
+```Bash
+best_fx: 10.0 at [1 1 1 1 1 1 1 1 1 1]
+```
 ### Visualized
-
+Searching process can be visualized by matplotlib
+```Python
+fig = plt.figure()
+plt.plot(res.fx[0:res.total_num_search])
+best_fx, best_action = res.export_all_sequence_best_fx()
+plt.plot(best_fx)
+fig.savefig("Search.png")
+```
 ### Using PHYSBO
 
 ## Searching Maximum value of function
