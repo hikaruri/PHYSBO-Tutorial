@@ -79,6 +79,7 @@ plt.plot(best_fx)
 fig.savefig("Search.png")
 ```
 ![Search_sample](Search_sample.png)
+
 We can visualize an evaluation function by `policy.get_score(mode="EI", xs=test_X)`
 ```Python
 scores = policy.get_score(mode="EI", xs=test_X)
