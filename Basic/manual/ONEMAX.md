@@ -11,6 +11,8 @@ We will find this answer automatically by BO.
 - [The OneMax Problem](https://tracer.lcc.uma.es/problems/onemax/onemax.html#SE91)
 - [遺伝的アルゴリズムでOneMax問題を解いてみる](https://qiita.com/pontyo4/items/a986df2582f3d0aaaa40)
 
+## Code
+[OneMax.py](OneMax.py)
 
 ## Preparation
 Generate binary number's array
