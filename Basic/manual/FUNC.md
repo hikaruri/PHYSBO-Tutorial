@@ -3,6 +3,8 @@
 Please refer to [OneMax problem's tutorial](./ONEMAX.md).
 
 We visualize the function of Gaussian process regression and reveal how to optimize by BO.
+## Code
+[Func.py](../Func.py)
 
 ## Preparation
 We define the simulator as 
