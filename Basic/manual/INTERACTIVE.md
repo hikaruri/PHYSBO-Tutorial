@@ -1,5 +1,11 @@
 # Interactive calculation
 We carry out to optimize the lattice constant of diamond.
+
+## Code
+[Interactive.py](../InteractiveBO/Interactive.py)
+[data.txt](../InteractiveBO/data.txt)
+[Cdia.dat](../InteractiveBO/Cdia.dat)
+
 ## Data Preparation
 First, we have to prepare `data.txt` as
 ```
