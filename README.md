@@ -9,6 +9,7 @@ Please prepare python3 and virtual enviroment (How to installation is [here](htt
 And, you can install PHYSBO by pip
 ```bash
 pip3 install physbo
+pip3 install matplotlib
 ```
 If you want to use jupyter-notebook,
 ```bash
