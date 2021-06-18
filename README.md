@@ -4,7 +4,10 @@ How to use PHYSBO for our laboratory
 ## PHYSBO code
 [https://github.com/issp-center-dev/PHYSBO](https://github.com/issp-center-dev/PHYSBO)
 ## Preparation
-
+**Please clone this repository**
+```bash
+git clone git@github.com:hikaruri/PHYSBO-Tutorial.git
+```
 Please prepare python3 and virtual enviroment (How to installation is [here](https://github.com/hikaruri/DFT_startup/blob/main/setup/minimum.md)). 
 And, you can install PHYSBO by pip
 ```bash
