@@ -19,12 +19,12 @@ N = 10
 X = []
 for i in range(2**N):
   Gene = []
-    for j in range(N):
-      if ((i >> j) & 1):
-        Gene.append(1)
-      else:
-        Gene.append(0)
-      X.append(Gene)
+  for j in range(N):
+    if ((i >> j) & 1):
+      Gene.append(1)
+    else:
+      Gene.append(0)
+    X.append(Gene)
 ```
 Set test_X as **numpy's array format, ndarray**
 ```Python
