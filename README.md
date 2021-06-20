@@ -24,8 +24,8 @@ pip3 install scikit-learn mglearn
 ```
 Or, please use [MateriApps LIVE!](http://cmsi.github.io/MateriAppsLive/). Release 3.3 includes PHYSBO.
 ## Tutorial
-[Python Tutorial](./PythonTutorial/README.md)
-[Basic Tutorial](./Basic/README.md)
+- [Python Tutorial](./PythonTutorial/README.md)
+- [Basic Tutorial](./Basic/README.md)
 
 ## PHYSBO manual
 - [English Manual](https://issp-center-dev.github.io/PHYSBO/manual/master/en/index.html)
