@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
     policy = physbo.search.discrete.policy(test_X=X)
 
-    # random search
+    # Random search
     policy.set_seed(10)
     policy.random_search(max_num_probes=3, simulator=simulator)
     best_fx, best_actions = policy.history.export_sequence_best_fx()
