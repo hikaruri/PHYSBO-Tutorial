@@ -12,12 +12,11 @@ def function(x) -> float:
 def simulator(actions: int) -> float:
     x = alpha_val[actions][0]
     fx = function(x)
-    alpha_action.append(x)
-    fx_action.append(fx)
     return fx
 
 
-def plotfig(policy, X, Figname):
+def plotfig(policy, X, fx_action,
+            alpha_action_val, Figname):
     mean = policy.get_post_fmean(X)
     var = policy.get_post_fcov(X)
     std = np.sqrt(var)
@@ -26,11 +25,10 @@ def plotfig(policy, X, Figname):
     fig, ax = plt.subplots()
     ax.plot(x, mean)
     ax.fill_between(x, (mean-std), (mean+std), color='b', alpha=.1)
-    ax.scatter(alpha_action, fx_action)
+    ax.scatter(alpha_action_val, fx_action)
     x1 = np.arange(0, 5, 0.01)
     y1 = function(x1)
     plt.plot(x1, y1, color='#ff4500')
-    # plt.show()
     fig.savefig(Figname)
 
 
@@ -39,22 +37,28 @@ if __name__ == '__main__':
     window_num = 10001
     alpha_max = 5.0
     alpha_min = 0.0
-    alpha_action = []
-    fx_action = []
+
     alpha_val = np.linspace(alpha_min, alpha_max,
                             window_num).reshape(window_num, 1)
 
     policy = physbo.search.discrete.policy(test_X=alpha_val)
     policy.set_seed(10)
-    policy.random_search(max_num_probes=1, simulator=simulator)
+    res = policy.random_search(max_num_probes=1, simulator=simulator)
+
     # policy.bayes_search(max_num_probes=10, simulator=simulator,
     #                     score="EI", interval=1, num_rand_basis=500)
 
     for i in range(10):
-        policy.bayes_search(max_num_probes=1, simulator=simulator,
-                            score="EI", interval=1, num_rand_basis=i)
+        res = policy.bayes_search(max_num_probes=1, simulator=simulator,
+                                  score="EI", interval=1, num_rand_basis=i)
+        fx_action = [res.fx[i] for i in range(res.total_num_search)]
+        alpha_action_val = \
+            [alpha_val[res.chosen_actions[i]][0]
+                for i in range(res.total_num_search)]
+
         Figname = "BO_" + str(i) + ".png"
-        plotfig(policy, alpha_val, Figname)
+        plotfig(policy, alpha_val, fx_action,
+                alpha_action_val, Figname)
 
     # score = policy.get_score(mode="EI", xs=test_X)
     best_fx, best_actions = policy.history.export_sequence_best_fx()
