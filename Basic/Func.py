@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     for i in range(10):
         res = policy.bayes_search(max_num_probes=1, simulator=simulator,
-                                  score="EI", interval=1, num_rand_basis=i)
+                                  score="EI", interval=1, num_rand_basis=500)
         fx_action = [res.fx[i] for i in range(res.total_num_search)]
         alpha_action_val = \
             [alpha_val[res.chosen_actions[i]][0]
