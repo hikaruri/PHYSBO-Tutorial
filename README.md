@@ -5,6 +5,7 @@ How to use PHYSBO for our laboratory
 [https://github.com/issp-center-dev/PHYSBO](https://github.com/issp-center-dev/PHYSBO)
 
 ## DEMO with streamlit
+[https://share.streamlit.io/hikaruri/physbo-streamlit/main/main.py](https://share.streamlit.io/hikaruri/physbo-streamlit/main/main.py) 
 
 [https://physbo-streamlit.herokuapp.com/](https://physbo-streamlit.herokuapp.com/)  
 
